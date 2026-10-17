@@ -13,11 +13,17 @@
   const stageCount = STAGES.length;
 
   document.getElementById("stats").innerHTML = [
-    `<div class="stat"><b>${RESOURCES.length}</b><span>검증한 무료 리소스</span></div>`,
+    `<div class="stat"><b>${RESOURCES.length}</b><span>검증한 리소스 (32 + 추가 25)</span></div>`,
     `<div class="stat s-ok"><b>${counts.ok}</b><span>링크 정상</span></div>`,
     `<div class="stat s-moved"><b>${counts.moved}</b><span>주소 변경됨</span></div>`,
     `<div class="stat s-dead"><b>${counts.dead}</b><span>링크 사망</span></div>`
   ].join("");
+
+  const eyebrow = document.getElementById("eyebrowStat");
+  if (eyebrow) eyebrow.textContent = `${RESOURCES.length}개 리소스 · ${STAGES.length}단계 · 전부 실제 접속 검증`;
+
+  const resTitle = document.getElementById("resTitle");
+  if (resTitle) resTitle.textContent = `무료 AI 학습 리소스 ${RESOURCES.length}개 (검증 완료)`;
 
   /* ---------- STAGE TIMELINE ---------- */
   document.getElementById("stageTimeline").innerHTML = STAGES.map(s => {

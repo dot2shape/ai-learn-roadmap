@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>무료로 배우는 AI — 24주 학습 로드맵 &amp; 커리큘럼</title>
-<meta name="description" content="이미지 속 32개 무료 AI 학습 사이트를 실제로 확인하고 엮은 24주 학습 일정·커리큘럼·목차. 입문부터 LLM·에이전트·MLOps까지." />
+<meta name="description" content="이미지 속 32개 무료 AI 학습 사이트를 실제로 확인하고, Anthropic SDLC·ComfyUI·이미지·영상 생성까지 더해 엮은 24주 학습 일정·커리큘럼·목차." />
 <meta property="og:title" content="무료로 배우는 AI — 24주 학습 로드맵" />
-<meta property="og:description" content="32개 무료 AI 학습 리소스를 검증하고 엮은 커리큘럼." />
+<meta property="og:description" content="무료 AI 학습 리소스를 전부 검증하고 엮은 10단계 커리큘럼." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
@@ -40,12 +40,13 @@
   <section class="hero">
     <div class="hero-glow"></div>
     <div class="wrap">
-      <p class="eyebrow">32개 무료 사이트 · 실제 접속 검증 완료</p>
+      <p class="eyebrow"><span id="eyebrowStat">리소스 검증 완료</span></p>
       <h1>무료로 배우는 <span class="grad">AI</span><br />24주 학습 로드맵</h1>
       <p class="hero-sub">
-        사진 한 장에 담긴 32개의 AI 학습 링크를 <strong>하나씩 직접 접속해 확인</strong>하고,
-        주소가 바뀌거나 사라진 링크까지 정리했습니다. 그 내용을 바탕으로
-        <strong>입문 → 딥러닝 → LLM·에이전트 → MLOps → 심화</strong> 순서의 학습 일정·커리큘럼·목차를 만들었습니다.
+        원본 이미지에 담긴 <strong>32개 AI 학습 링크를 하나씩 직접 접속해 검증</strong>하고, 주소가 바뀌거나 사라진 링크까지 정리했습니다.
+        여기에 <strong>Anthropic의 AI 개발 워크플로(SDLC)·ComfyUI·AI 이미지·AI 영상 생성</strong> 트랙을 더해,
+        <strong>입문 → 딥러닝 → LLM·에이전트 → MLOps → 심화 → 개발 워크플로 → 생성형 미디어</strong> 순서의
+        학습 일정·커리큘럼·목차를 만들었습니다.
       </p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#schedule">24주 일정 보기</a>
@@ -84,7 +85,7 @@
 
       <div class="notice">
         <h3>⚠️ 원본 이미지에서 달라진 점</h3>
-        <p>링크를 하나씩 눌러 확인한 결과, 아래 5개는 그대로 쓸 수 없었습니다. 사이트에는 <strong>수정된 주소</strong>로 연결해 두었습니다.</p>
+        <p>링크를 하나씩 눌러 확인한 결과, 아래 항목들은 그대로 쓸 수 없었습니다. 사이트에는 <strong>수정된 주소</strong>로 연결해 두었습니다.</p>
         <ul>
           <li><b>머신러닝</b> — <code>kaggle.com/learn/intro-to-ml</code> → <b>404</b> · 실제 <code>/intro-to-machine-learning</code></li>
           <li><b>생성형 AI</b> — <code>kaggle.com/learn/generative-ai</code> → <b>404</b> · 실제 Kaggle <em>5-Day Intensive Generative AI</em></li>
@@ -93,14 +94,29 @@
           <li><b>AI로 만들기</b> — <code>buildwithai.com</code> → <b>도메인 사망(404)</b> · 대안 Google <em>Build with AI</em></li>
         </ul>
       </div>
+
+      <div class="notice notice-blue">
+        <h3>➕ 추가한 트랙에서 확인한 것 (2026-10)</h3>
+        <p>요청하신 <strong>Anthropic SDLC·AI 과정, ComfyUI, AI 이미지·영상 생성</strong>을 새로 조사해 <b>08 · 09단계</b>로 추가했습니다. 조사 중 발견한 변화입니다.</p>
+        <ul>
+          <li><b>Anthropic Academy</b> — <code>anthropic.com/learn</code> → <b>academy.claude.com</b> 으로 통합 (강좌 27개·리소스 308개, <code>/ko/</code> 한국어 지원)</li>
+          <li><b>AI를 위한 SDLC</b> — <em>The AI-native SDLC playbook</em> 실제 존재 확인 · 6단계 12플레이 14레슨, 약 1시간</li>
+          <li><b>anthropics/courses</b> — <b>2026-09-15 아카이브(읽기 전용)</b> · 신규 콘텐츠는 Academy로 이전</li>
+          <li><b>ComfyUI</b> — 저장소가 <code>comfyanonymous/</code> → <b>Comfy-Org/ComfyUI</b> 로 이전 · 공식 문서는 <b>한국어 1,700페이지+</b></li>
+          <li><b>Luma Dream Machine</b> — <b>Luma Agents</b> 로 개편 (<code>/dream-machine</code> → <code>/app</code>)</li>
+          <li><b>OpenAI Sora</b> — <b>2026-04-26 서비스 종료</b> 🔴 · 영상 트랙은 Veo 3.1·Kling 4.0·Runway 로 대체</li>
+          <li><b>HF Diffusion Course</b> — 안내되던 <code>unit0/introduction</code> 은 404 · 실제 경로는 <code>unit0/1</code></li>
+          <li><b>ComfyWorkflows.com</b> — <b>접속 실패</b>(SSL 오류) · <code>comfy.org/workflows</code> 사용 권장</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- ================= CURRICULUM ================= -->
   <section class="section alt" id="curriculum">
     <div class="wrap">
-      <h2 class="sec-title">8단계 커리큘럼</h2>
-      <p class="sec-lead">총 <strong>24주 · 주 8~10시간</strong> 기준. 0단계는 선택, 5단계는 선택 트랙, 7단계는 그 이후의 확장입니다.</p>
+      <h2 class="sec-title">10단계 커리큘럼</h2>
+      <p class="sec-lead">총 <strong>24주 · 주 8~10시간</strong> 기준. 0단계는 선택, 5단계는 선택 트랙, 7단계는 그 이후의 확장이며, <strong>8·9단계는 원하는 시점에 병행</strong>할 수 있는 트랙입니다.</p>
       <div class="stage-timeline" id="stageTimeline"></div>
     </div>
   </section>
@@ -112,6 +128,7 @@
       <p class="sec-lead">
         각 주차는 <strong>약 8~10시간</strong>(하루 1시간, 주 5일 + 주말 2~3시간)을 가정합니다.
         표의 <span class="pill-mini" style="--c:#8b5cf6">단계</span> 색으로 어느 단계인지 표시됩니다.
+        마지막 <b>병행 A · B</b> 트랙(Anthropic 개발 워크플로 / 생성형 미디어)은 원하는 시점에 끼워 넣으면 됩니다.
       </p>
       <div class="table-wrap">
         <table class="sched-table" id="schedTable">
@@ -128,8 +145,8 @@
   <!-- ================= RESOURCES ================= -->
   <section class="section alt" id="resources">
     <div class="wrap">
-      <h2 class="sec-title">리소스 32개 (검증 완료)</h2>
-      <p class="sec-lead">각 카드의 <b>커리큘럼</b>은 실제 사이트에서 확인한 모듈·챕터 목록입니다. 상태 배지로 원본 링크의 이상 여부를 표시합니다.</p>
+      <h2 class="sec-title" id="resTitle">무료 AI 학습 리소스 (검증 완료)</h2>
+      <p class="sec-lead">각 카드의 <b>커리큘럼</b>은 실제 사이트에서 확인한 모듈·챕터 목록입니다. 상태 배지로 원본 링크의 이상 여부를 표시합니다. 원본 이미지의 32개 + 추가 트랙 <b>25개</b>로 구성됩니다.</p>
 
       <div class="filters">
         <div class="filter-group" id="stageFilter"></div>

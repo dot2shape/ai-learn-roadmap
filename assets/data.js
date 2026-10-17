@@ -76,6 +76,24 @@ const STAGES = [
     color: "#e879f9",
     goal: "수학적 원리를 파고들고, 클라우드 AI 서비스·자격증으로 확장한다.",
     exit: "논문 수준의 원리를 읽고 클라우드에 AI 워크로드를 설계할 수 있다."
+  },
+  {
+    id: "s8",
+    no: "08",
+    name: "AI 개발 워크플로 (Anthropic · SDLC)",
+    weeks: "16주차 이후 · 상시",
+    color: "#d97757",
+    goal: "Claude Code·MCP·Skills로 소프트웨어 개발 생명주기(SDLC) 자체를 AI 네이티브하게 바꾼다.",
+    exit: "CLAUDE.md·skills·hooks를 갖춘 AI 네이티브 SDLC 파이프라인을 팀에 적용할 수 있다."
+  },
+  {
+    id: "s9",
+    no: "09",
+    name: "생성형 미디어 (이미지 · 영상)",
+    weeks: "언제든 병행",
+    color: "#ec4899",
+    goal: "ComfyUI 노드 워크플로와 이미지·영상 생성 모델로 실제 결과물을 만든다.",
+    exit: "ComfyUI 워크플로 1개를 완성하고, 텍스트→이미지→영상까지 한 편을 만들 수 있다."
   }
 ];
 
@@ -463,6 +481,311 @@ const RESOURCES = [
     status: "ok",
     modules: ["Week1 What is AI?", "Week2 Building AI Projects", "Week3 Building AI In Your Company", "Week4 AI and Society"],
     note: "비전공 임원·기획자·PM이 AI를 '조직 전략과 기회' 관점에서 7시간 만에 이해하는 가장 정석적인 입문. 수강생 260만+."
+  },
+
+  /* ---------- 08 · AI 개발 워크플로 (Anthropic · SDLC) ---------- */
+  {
+    id: 33, key: "앤트로픽 AI 과정 (허브)", stage: "s8", level: "입문~고급",
+    title: "Claude Academy (구 Anthropic Academy)",
+    provider: "Anthropic",
+    url: "https://academy.claude.com/",
+    hours: "강좌 27개 · 전체 리소스 308개 (자기주도)",
+    lang: "한국어 지원 (/ko/)",
+    cost: "무료", cert: "완료 배지 (Completion badge)",
+    status: "moved",
+    modules: ["Claude Code 트랙 (101 · in action)", "Claude Platform · Claude API", "Model Context Protocol (입문·고급)", "Agent Skills · Subagents", "AI Fluency 4D 프레임워크", "Claude with Amazon Bedrock", "Claude with Google Vertex AI", "Deploying Claude Enterprise", "The AI-native SDLC playbook"],
+    note: "흩어져 있던 Anthropic 강좌가 academy.claude.com 한 곳으로 통합되었습니다(anthropic.com/learn → 리다이렉트). 전 강좌 무료, 퀴즈+배지 제공, /ko/ 로 한국어 일부 지원."
+  },
+  {
+    id: 34, key: "AI를 위한 SDLC", stage: "s8", level: "고급",
+    title: "The AI-native SDLC playbook",
+    provider: "Anthropic Academy",
+    url: "https://academy.claude.com/courses/ai-native-sdlc-playbook",
+    hours: "14레슨 · 약 1시간",
+    lang: "한국어 지원 (/ko/)",
+    cost: "무료", cert: "없음 (배지 미제공)",
+    status: "ok",
+    modules: ["도입 · What changes and where to start", "Plan · intent.md 작성", "Design · 요구사항과 설계", "Build · Claude Code plan mode · CLAUDE.md", "Build · Skills로 제도적 지식화", "Build · 병렬 세션과 subagents", "Test · 피드백 루프와 CI 상시 eval", "Deploy · PR 리뷰 루프 · Hook 승인 게이트", "Deploy · CI/CD 통합과 배포", "Maintain · 지표로 루프 닫기"],
+    note: "'앤트로픽의 AI를 위한 SDLC'는 실제로 존재합니다. 전통 SDLC ↔ AI 네이티브 SDLC를 Plan→Design→Build→Test→Deploy→Maintain 6단계·12개 플레이로 대조하며, 코드 작성보다 조직 프로세스 개편이 주제라 엔지니어링 리더용에 가깝습니다."
+  },
+  {
+    id: 35, key: "Claude Code 실전", stage: "s8", level: "중급",
+    title: "Claude Code in action",
+    provider: "Anthropic Academy",
+    url: "https://academy.claude.com/courses/claude-code-in-action",
+    hours: "9레슨 · 약 1시간",
+    lang: "한국어 지원 (/ko/)",
+    cost: "무료", cert: "완료 배지",
+    status: "ok",
+    modules: ["Steering long sessions", "A CLAUDE.md that follows", "Verification skills", "Permission modes", "Hooks", "Routines and headless", "GitHub Actions and Code Review", "Trust it: Verifying unsupervised runs", "Plugins"],
+    note: "SDLC의 Build~Deploy 단계를 실제로 자동화·검증하는 실습입니다. SDLC 플레이북과 짝으로 보면 좋습니다."
+  },
+  {
+    id: 36, key: "Claude Code 입문", stage: "s8", level: "입문~초급",
+    title: "Claude Code 101",
+    provider: "Anthropic Academy",
+    url: "https://academy.claude.com/courses/claude-code-101",
+    hours: "12레슨 · 약 1.5시간",
+    lang: "한국어 지원 (/ko/)",
+    cost: "무료", cert: "완료 배지",
+    status: "ok",
+    modules: ["What is Claude Code?", "How Claude Code works · 설치", "Your first prompt", "Explore → Plan → Code → Commit 워크플로", "Context management", "Code review", "CLAUDE.md", "Subagents", "Skills · MCP · Hooks"],
+    note: "터미널 기반 AI 코딩 에이전트를 처음 쓸 때 보는 입문. AI를 SDLC에 붙이는 출발점입니다."
+  },
+  {
+    id: 37, key: "Claude API 개발", stage: "s8", level: "중급~고급",
+    title: "Building with the Claude API",
+    provider: "Anthropic Academy",
+    url: "https://academy.claude.com/courses/building-with-the-claude-api",
+    hours: "67레슨 · 퀴즈 8개 · 약 9시간",
+    lang: "한국어 지원 (/ko/)",
+    cost: "무료", cert: "완료 배지",
+    status: "ok",
+    modules: ["Accessing the API (9레슨)", "Prompt evaluation", "Prompt engineering techniques", "Tool use (13레슨)", "RAG & Agentic Search (7레슨)", "Features of Claude", "Model Context Protocol (11레슨)", "Anthropic apps (Claude Code · computer use)", "Agents and workflows (8레슨)", "Final Assessment"],
+    note: "Academy에서 가장 방대한 개발자 과정(9시간). Python 실무 수준이 선수지식입니다."
+  },
+  {
+    id: 38, key: "MCP 입문", stage: "s8", level: "중급",
+    title: "Introduction to Model Context Protocol",
+    provider: "Anthropic Academy",
+    url: "https://academy.claude.com/courses/introduction-to-model-context-protocol",
+    hours: "10레슨 · 약 1시간",
+    lang: "한국어 지원 (/ko/)",
+    cost: "무료", cert: "완료 배지",
+    status: "ok",
+    modules: ["Introducing MCP", "MCP clients", "Defining tools with MCP", "The server inspector", "Implementing a client", "Defining resources · Accessing resources", "Defining prompts · Prompts in the client"],
+    note: "에이전트에 도구를 붙이는 표준 프로토콜. Claude Code·LangChain·Cursor 등 여러 생태계가 MCP를 채택했습니다."
+  },
+  {
+    id: 39, key: "Agent Skills", stage: "s8", level: "초급~중급",
+    title: "Introduction to agent skills",
+    provider: "Anthropic Academy",
+    url: "https://academy.claude.com/courses/introduction-to-agent-skills",
+    hours: "6레슨 · 약 1시간",
+    lang: "한국어 지원 (/ko/)",
+    cost: "무료", cert: "없음 (배지 미표기)",
+    status: "ok",
+    modules: ["What are skills?", "Creating your first skill", "Configuration and multi-file skills", "Skills vs. other features", "Sharing skills", "Troubleshooting skills"],
+    note: "SDLC 플레이북의 'Skills as institutional knowledge'를 실제로 만드는 법. 팀 지식을 에이전트에 심는 방법입니다."
+  },
+  {
+    id: 40, key: "AI 리터러시 (앤트로픽)", stage: "s8", level: "입문",
+    title: "AI Fluency: Framework & Foundations",
+    provider: "Anthropic Academy",
+    url: "https://academy.claude.com/courses/ai-fluency-framework-foundations",
+    hours: "14레슨 · 약 4시간",
+    lang: "한국어 지원 (/ko/)",
+    cost: "무료", cert: "완료 배지",
+    status: "ok",
+    modules: ["4D 프레임워크 (Delegation·Description·Discernment·Diligence)", "Generative AI fundamentals", "Capabilities & limitations", "Effective prompting techniques", "Description–Discernment loop"],
+    note: "비개발자·직군별 시리즈(builders·educators·students·small businesses 등)로도 제공됩니다. 선수지식 없음."
+  },
+  {
+    id: 41, key: "앤트로픽 오픈소스 커리큘럼", stage: "s8", level: "초급~중급",
+    title: "anthropics/courses (GitHub)",
+    provider: "Anthropic",
+    url: "https://github.com/anthropics/courses",
+    hours: "5개 코스 · 수십 시간 (Jupyter 노트북)",
+    lang: "영어",
+    cost: "무료 (실습 시 API 비용 발생)",
+    cert: "없음",
+    status: "moved",
+    modules: ["Anthropic API fundamentals", "Prompt engineering interactive tutorial", "Real world prompting", "Prompt evaluations", "Tool use"],
+    note: "⚠️ 2026-09-15 저장소가 아카이브(읽기 전용)되었습니다. 내용은 유효하지만 신규 콘텐츠는 Academy로 이전했으니 Academy를 먼저 보세요."
+  },
+  {
+    id: 42, key: "Claude Code 문서", stage: "s8", level: "초급~고급",
+    title: "Claude Code 공식 문서",
+    provider: "Anthropic",
+    url: "https://docs.claude.com/en/docs/claude-code/overview",
+    hours: "레퍼런스형 (수시 열람)",
+    lang: "영어",
+    cost: "무료", cert: "없음",
+    status: "ok",
+    modules: ["설치 (터미널·Homebrew·VS Code·JetBrains·Desktop·Web)", "MCP 연동", "CLAUDE.md · skills · hooks", "병렬 subagents", "Agent SDK", "CI/CD 자동화", "스케줄링 (Routines)"],
+    note: "Academy 강좌들이 링크하는 1차 자료. docs.anthropic.com 도 동일하게 동작합니다."
+  },
+
+  /* ---------- 09 · 생성형 미디어 (이미지 · 영상) ---------- */
+  {
+    id: 43, key: "ComfyUI (본체)", stage: "s9", level: "초급~중급",
+    title: "ComfyUI — 노드 기반 생성 엔진",
+    provider: "Comfy Org (오픈소스)",
+    url: "https://github.com/Comfy-Org/ComfyUI",
+    hours: "설치+첫 이미지 1~3시간 / 워크플로 이해 10~20시간",
+    lang: "README 영어 (공식 문서는 한국어)",
+    cost: "무료 (GPL-3.0)", cert: "없음",
+    status: "moved",
+    modules: ["Desktop 앱 / Windows Portable / 수동 설치", "노드 그래프로 이미지·영상·3D·오디오 조립", "SD 1.5·SDXL·Flux.1/2·Qwen Image 등 모델 지원", "App Mode (워크플로를 앱 UI로 노출)", "로컬 API · 큐잉 · VRAM 오프로딩·양자화", "워크플로 JSON 저장 · PNG 메타데이터 임베딩", "ComfyUI-Manager 커스텀 노드"],
+    note: "저장소가 comfyanonymous/ComfyUI → Comfy-Org/ComfyUI 로 이전했습니다. '4GB VRAM + 8GB RAM'에서도 최신 대형 모델을 돌릴 수 있다고 README에 명시되어 있습니다."
+  },
+  {
+    id: 44, key: "ComfyUI 공식 문서", stage: "s9", level: "입문~고급",
+    title: "ComfyUI Official Documentation",
+    provider: "Comfy Org",
+    url: "https://docs.comfy.org/",
+    hours: "입문 트랙 2~4시간 / 커스텀 노드 6~12시간",
+    lang: "한국어 지원 (한국어 약 1,711페이지)",
+    cost: "무료", cert: "없음",
+    status: "ok",
+    modules: ["Getting Started (설치·첫 생성·기본 개념)", "텍스트→이미지 · 이미지→이미지 · 인페인팅", "업스케일 · LoRA · 다중 LoRA", "ControlNet (Pose·Depth·T2I-Adapter)", "FLUX · Qwen-Image · Z-Image 튜토리얼", "비디오 (Wan·LTX·HunyuanVideo)", "3D (Hunyuan3D·TRELLIS)", "커스텀 노드 제작 · Comfy Registry", "Comfy MCP · CLI · Agent"],
+    note: "한국어 문서가 1,700페이지 이상 제공됩니다. '만들고 싶은 워크플로 1개'를 정하고 그 튜토리얼만 따라가는 게 가장 효율적입니다."
+  },
+  {
+    id: 45, key: "ComfyUI 예제 모음", stage: "s9", level: "초급~고급",
+    title: "ComfyUI Examples (워크플로 백과)",
+    provider: "Comfy Org",
+    url: "https://comfyanonymous.github.io/ComfyUI_examples/",
+    hours: "기본 예제 3~5개 3~6시간 / 전체 훑기 20시간+",
+    lang: "영어 (예제는 언어 의존도 낮음)",
+    cost: "무료", cert: "없음",
+    status: "ok",
+    modules: ["2-Pass Txt2Img (Hires Fix) · Img2Img · Inpainting", "LoRA · Embeddings · Hypernetworks", "ControlNet & T2I-Adapter · GLIGEN", "SDXL · SD3 · Flux · Qwen Image · HiDream", "Stable Video Diffusion · LTX-Video · Wan 2.1/2.2", "HunyuanVideo · Cosmos · Mochi", "3D · 오디오 모델"],
+    note: "모든 예제 이미지에 워크플로 메타데이터가 들어 있어 드래그하면 그대로 재현됩니다. 복붙 가능한 정답 창고입니다."
+  },
+  {
+    id: 46, key: "워크플로 템플릿 허브", stage: "s9", level: "입문~중급",
+    title: "Comfy Workflows (템플릿 661+)",
+    provider: "Comfy Org",
+    url: "https://comfy.org/workflows/",
+    hours: "템플릿 실행 1~3시간",
+    lang: "한국어 UI 지원",
+    cost: "무료 (Cloud 실행은 별도)", cert: "없음",
+    status: "ok",
+    modules: ["661+ 템플릿 (모델·카테고리별)", "노드 그래프 vs Comfy Apps 필터", "Staff Pick 선정작", "text-to-image · image-edit · image-to-video · motion-control 태그", "Try now (Cloud 즉시 실행)", "모델 다운로드 안내 포함"],
+    note: "신규 모델 워크플로를 가장 빨리 얻는 공식 창구. 로컬이든 클라우드든 여기서 시작하면 됩니다."
+  },
+  {
+    id: 47, key: "모델·LoRA 저장소", stage: "s9", level: "입문~중급",
+    title: "Civitai",
+    provider: "Civitai",
+    url: "https://civitai.com/",
+    hours: "모델 탐색·적용 감각 2~5시간",
+    lang: "영어",
+    cost: "기본 무료 (+Pro/Buzz)", cert: "없음",
+    status: "ok",
+    modules: ["커뮤니티 체크포인트 · LoRA · 임베딩 · 업스케일러", "Featured Models 갤러리", "Articles (모델 업데이트 해설)", "자체 생성기 · Buzz 재화 시스템", "개발자 API (developer.civitai.com)"],
+    note: "'강의'가 아니라 재료 창고입니다. LoRA·체크포인트의 상업 이용 가능 여부를 모델 카드에서 반드시 확인하세요."
+  },
+  {
+    id: 48, key: "Diffusion 이론", stage: "s9", level: "중급~고급",
+    title: "Hugging Face Diffusion Models Course",
+    provider: "Hugging Face",
+    url: "https://huggingface.co/learn/diffusion-course/unit0/1",
+    hours: "4유닛 · 챕터당 1주, 주 6~8시간 (약 24~32시간)",
+    lang: "영어 (한국어 커뮤니티 번역 README)",
+    cost: "무료", cert: "없음",
+    status: "moved",
+    modules: ["Unit1 Diffusion 모델 소개 · 밑바닥부터 구현", "Unit2 파인튜닝과 가이던스", "Unit3 Stable Diffusion (텍스트 조건부 latent diffusion)", "Unit4 고급 기법 · 커스텀 파이프라인", "🤗 Diffusers 실습 노트북"],
+    note: "이미지·오디오 생성 중심이며 영상 생성 전용 챕터는 없습니다. 원래 안내되던 unit0/introduction 경로는 404이고 unit0/1이 정상 경로입니다."
+  },
+  {
+    id: 49, key: "Diffusers 실습", stage: "s9", level: "중급",
+    title: "Hugging Face Diffusers 문서",
+    provider: "Hugging Face",
+    url: "https://huggingface.co/docs/diffusers/index",
+    hours: "추론 파이프라인 3~5시간 / 파인튜닝 15~25시간",
+    lang: "영어",
+    cost: "무료 (Apache-2.0)", cert: "없음",
+    status: "ok",
+    modules: ["DiffusionPipeline (몇 줄로 추론)", "LoRA 등 어댑터 적용", "Modular Diffusers (커스텀 파이프라인)", "오프로딩·양자화 · torch.compile 최적화", "학습 / 파인튜닝", "CLI · Hub 연동"],
+    note: "ComfyUI로 만든 결과를 코드로 재현·자동화하거나 자기 LoRA를 직접 학습할 때 들어가는 관문입니다."
+  },
+  {
+    id: 50, key: "AI 영상 (올인원)", stage: "s9", level: "입문~중급",
+    title: "Runway + Runway Academy",
+    provider: "Runway",
+    url: "https://runwayml.com/",
+    hours: "도구형 · Academy 강좌는 모듈별",
+    lang: "영어",
+    cost: "무료 125 크레딧 (1회성) · Academy 무료", cert: "없음",
+    status: "ok",
+    modules: ["Gen-4.5 · Aleph 2.0 · Seedance · Kling 모델 통합", "이미지→영상 · 비디오 확장(Expand)", "Act-Two 캐릭터 애니메이션", "4K 업스케일 · 음악·음성·SFX 생성", "Academy: AI for Advertising (10모듈)", "Academy: AI for Visual Effects (6모듈)", "Academy: Building Custom Workflows (3모듈)"],
+    note: "영상 AI의 사실상 표준 입문 도구. 무료 125크레딧 + 무료 Academy 조합이 초보자 출발점으로 가장 안전합니다."
+  },
+  {
+    id: 51, key: "AI 영상 (90분 입문)", stage: "s9", level: "입문",
+    title: "Higgsfield Academy",
+    provider: "Higgsfield",
+    url: "https://www.higgsfield.ai/academy",
+    hours: "7레슨 · 약 90분",
+    lang: "영어",
+    cost: "무료로 시작 (실습에 크레딧 필요)", cert: "수료증 제공",
+    status: "ok",
+    modules: ["7레슨 · 첫 레슨에서 첫 영상 완성", "PDF 가이드 + 과제", "'Learn AI video from zero' 무경험자 대상", "30+ 모델 통합 (Sora 2·Kling·Veo·Wan)", "Cinema Studio 4.0 · Genjutsu 모션 트랜스퍼", "Katana 원커맨드 편집"],
+    note: "조사한 영상 도구 중 유일하게 '90분·7레슨·수료증'이 명시된 과정입니다. 시간이 한정된 초보자에게 가장 추천할 만합니다."
+  },
+  {
+    id: 52, key: "AI 영상 (Google)", stage: "s9", level: "입문~중급",
+    title: "Google Veo 3.1",
+    provider: "Google DeepMind",
+    url: "https://deepmind.google/models/veo/",
+    hours: "도구형",
+    lang: "영어",
+    cost: "Gemini / Google Flow에서 체험 (Google 계정 필요)", cert: "없음",
+    status: "ok",
+    modules: ["네이티브 오디오 포함 텍스트→영상 · 이미지→영상", "레퍼런스 이미지로 캐릭터·스타일 일관성", "장면 연장(Extend) · 첫·끝 프레임 보간", "카메라 컨트롤 · 아웃페인팅", "오브젝트 추가/제거 · 캐릭터 컨트롤", "1080p / 4K 출력", "무료 프롬프트 가이드"],
+    note: "네이티브 오디오 + 정밀 제어가 강점. labs.google/flow 는 로그인이 필요해 무료 여부는 Google 계정 로그인 후 확인해야 합니다."
+  },
+  {
+    id: 53, key: "AI 영상 (Kling)", stage: "s9", level: "입문~중급",
+    title: "Kling AI",
+    provider: "Kuaishou",
+    url: "https://klingai.com/",
+    hours: "도구형 (+공식 가이드 1~2시간)",
+    lang: "영어",
+    cost: "가입 필요 (무료 크레딧 정책 미확인)", cert: "없음",
+    status: "ok",
+    modules: ["Kling 4.0 (오디오-비주얼 동시 생성)", "Image to Video · 시작·끝 프레임", "Motion Control · Motion Brush", "Lip Sync · Elements (캐릭터 일관성)", "Extend · Canvas 스토리보드", "공식 퀵스타트 가이드 (klingai.com/quickstart)"],
+    note: "기능 폭과 공식 무료 문서 품질이 최상급입니다. 캐릭터 일관성과 모션 컨트롤을 체계적으로 배우기 좋습니다."
+  },
+  {
+    id: 54, key: "AI 영상 (템플릿)", stage: "s9", level: "입문",
+    title: "Hailuo AI (MiniMax)",
+    provider: "MiniMax",
+    url: "https://hailuoai.video/",
+    hours: "도구형",
+    lang: "영어 (일부 템플릿 한국어)",
+    cost: "일부 템플릿 Free 태그 확인 (정책 미확인)", cert: "없음",
+    status: "ok",
+    modules: ["H3 최신 영상 모델 · 멀티모달 편집", "Image → Video · 이미지 생성", "Hailuo Agent", "즉시 사용 템플릿 (사진 1장 모션캡처·스타일 전환)", "K-Pop MV · 제품/광고 · CineScope 템플릿", "Hands-on Tutorials 섹션"],
+    note: "템플릿 기반이라 프롬프트 작성법을 몰라도 시작할 수 있습니다. '일단 눈으로 결과를 보며 시작'하는 첫 단계에 가장 부담이 적습니다."
+  },
+  {
+    id: 55, key: "AI 영상 (에이전트형)", stage: "s9", level: "초급",
+    title: "Luma Agents (구 Dream Machine)",
+    provider: "Luma AI",
+    url: "https://lumalabs.ai/app",
+    hours: "도구형",
+    lang: "영어",
+    cost: "무료 체험 버튼 있음 (플랜 조건 미표기)", cert: "없음",
+    status: "moved",
+    modules: ["무한 캔버스에서 이미지·영상·오디오 생성/편집", "정지 이미지 → 영상 애니메이션", "영상 연장 · 화면비 리프레임 · 스타일 변환", "립싱크/보이스오버 · 다국어 더빙", "Master Reference Assets (일관성 유지)", "멀티 모델 오케스트레이션 (Veo·Kling·Runway 등)"],
+    note: "'Dream Machine' 브랜드가 'Luma Agents'로 바뀌었고 /dream-machine 은 /app 으로 리다이렉트됩니다. 노드·프롬프트 지식 없이도 됩니다."
+  },
+  {
+    id: 56, key: "로컬 영상 워크플로", stage: "s9", level: "중급~고급",
+    title: "ComfyUI 비디오 — Wan 2.2 / HunyuanVideo",
+    provider: "Comfy Org",
+    url: "https://docs.comfy.org/tutorials/video/wan/wan2_2",
+    hours: "도구형 (모델 다운로드·셋업에 시간 소요)",
+    lang: "영어",
+    cost: "완전 무료 (오픈소스, Apache 2.0)", cert: "없음",
+    status: "ok",
+    modules: ["Wan2.2-TI2V-5B (텍스트·이미지→영상, 8GB VRAM 동작)", "Wan2.2-T2V-A14B / I2V-A14B", "FLF2V (첫·끝 프레임→영상)", "MoE high-noise / low-noise 전문가 구조", "HunyuanVideo 13B (T2V · I2V v1/v2)", "LoRA 학습으로 커스텀 효과", "GGUF · Lightx2v 4-step LoRA (커뮤니티)"],
+    note: "무제한·무료·상용가능·완전 커스터마이징이 장점이지만 초보자 첫 단계로는 진입장벽이 높습니다. 3~4단계에 배치하세요. ⚠️ wan2_1 경로는 404입니다."
+  },
+  {
+    id: 57, key: "AI 영상 (서비스 종료)", stage: "s9", level: "입문",
+    title: "OpenAI Sora — 서비스 종료",
+    provider: "OpenAI",
+    url: "https://sora.com/",
+    hours: "—",
+    lang: "—",
+    cost: "해당 없음", cert: "—",
+    status: "dead",
+    modules: ["(종료 전) 텍스트→최대 1분 영상", "이미지→영상", "영상 연장 · 프레임 보간", "멀티샷 캐릭터·스타일 유지"],
+    note: "⚠️ 2026-04-26자로 Sora 제품이 종료되었습니다. 커리큘럼에서는 Veo 3.1 · Kling 4.0 · Runway Gen-4.5 같은 현행 모델로 대체하세요."
   }
 ];
 
@@ -492,7 +815,9 @@ const SCHEDULE = [
   { week: "21", stage: "s6", title: "MLOps 기초", hours: "10h", tasks: ["#18 MLflow Tracking·Model Registry", "학습 실험 로깅 자동화"] },
   { week: "22", stage: "s6", title: "LLM 관측과 평가", hours: "10h", tasks: ["#18 MLflow Tracing·Evaluation", "#13 HF Docs (PEFT·TRL)", "#31 Google Build with AI 워크숍 참여"] },
   { week: "23", stage: "s6", title: "포트폴리오 정리", hours: "10h", tasks: ["#22 freeCodeCamp 프로젝트 요건 충족", "프로젝트 3종 GitHub 정리", "이력서·포트폴리오 문서화"] },
-  { week: "24+", stage: "s7", title: "심화 · 클라우드 · 자격증", hours: "주 8~10h", tasks: ["#24 Stanford CS229 (선형대수·확률 선행)", "#28 Azure AI / #27 AWS ML / #29 Google Cloud AI 중 택1", "#26 구글 ML 심화 코스"] }
+  { week: "24+", stage: "s7", title: "심화 · 클라우드 · 자격증", hours: "주 8~10h", tasks: ["#24 Stanford CS229 (선형대수·확률 선행)", "#28 Azure AI / #27 AWS ML / #29 Google Cloud AI 중 택1", "#26 구글 ML 심화 코스"] },
+  { week: "병행 A", stage: "s8", title: "AI 개발 워크플로 트랙 (Anthropic)", hours: "주 3~5h", tasks: ["#36 Claude Code 101 로 입문", "#35 Claude Code in action (SDLC Build~Deploy 실습)", "#34 The AI-native SDLC playbook (Plan→Maintain)", "#38 MCP 입문 · #39 Agent Skills · #37 Claude API"] },
+  { week: "병행 B", stage: "s9", title: "생성형 미디어 트랙 (이미지 · 영상)", hours: "주 3~5h", tasks: ["#44 ComfyUI 공식 문서(한국어) 입문 트랙", "#46 Comfy Workflows 에서 템플릿 1개 재현", "#45 ComfyUI Examples · #47 Civitai 로 모델·LoRA 적용", "#51 Higgsfield Academy (90분·수료증) → #50 Runway / #52 Veo / #53 Kling"] }
 ];
 
 const LEVELS = ["전체", "입문", "초급", "중급", "고급"];

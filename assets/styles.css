@@ -105,6 +105,10 @@ code{background:#1b2435;padding:.12em .42em;border-radius:6px;font-size:.88em;co
 .notice ul{margin:0;padding-left:18px;display:grid;gap:6px}
 .notice li{color:#cfc9b6;font-size:.92rem}
 .notice b{color:#fde68a}
+.notice-blue{background:linear-gradient(180deg,rgba(110,168,254,.08),rgba(110,168,254,.03));border-color:rgba(110,168,254,.32)}
+.notice-blue h3{color:#93c5fd}
+.notice-blue b{color:#bfdbfe}
+.notice-blue code{background:#172033}
 
 /* ---------- STAGE TIMELINE ---------- */
 .stage-timeline{display:grid;gap:14px}

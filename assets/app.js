@@ -25,6 +25,12 @@
   const resTitle = document.getElementById("resTitle");
   if (resTitle) resTitle.textContent = `무료 AI 학습 리소스 ${RESOURCES.length}개 (검증 완료)`;
 
+  const navRes = document.getElementById("navResCount");
+  if (navRes) navRes.textContent = `리소스 ${RESOURCES.length}`;
+
+  const ctaRes = document.getElementById("ctaResCount");
+  if (ctaRes) ctaRes.textContent = `리소스 ${RESOURCES.length}개 확인`;
+
   /* ---------- STAGE TIMELINE ---------- */
   document.getElementById("stageTimeline").innerHTML = STAGES.map(s => {
     const n = RESOURCES.filter(r => r.stage === s.id).length;
